@@ -1,0 +1,35 @@
+{
+  "name": "whoismyplayer",
+  "version": "1.0.0",
+  "main": "src/server/app.js", 
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"node src/server/server.js\"",
+    "build": "vite build",
+    "start": "node src/server/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.17.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-react": "^6.0.2",
+    "concurrently": "^9.2.1",
+    "eslint": "^10.5.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "nodemon": "^3.1.14",
+    "vite": "^8.0.16"
+  }
+}
