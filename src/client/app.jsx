@@ -1,13 +1,23 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./components/layout/layout.jsx";
+import Dashboard from "./components/dashboard/dashboard.jsx";
+import Ranking from "./components/ranking/ranking.jsx";
+import Compare from "./components/compare/compare.jsx";
+import Player from "./components/player/player.jsx";
 
 function App() {
   return (
-    <div className="page-home">
-        <div className="container">
-            <h1 className="text-center mt-5">Welcome to WhoIsMyPlayer</h1>
-            <p className="text-center">Your ultimate player management tool.</p>
-        </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="ranking" element={<Ranking />} />
+        <Route path="compare" element={<Compare />} />
+        <Route path="player" element={<Player />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
