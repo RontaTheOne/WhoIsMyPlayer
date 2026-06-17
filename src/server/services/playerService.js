@@ -1,8 +1,12 @@
 class PlayerService{
     normalizePlayer(playerData){
+        if (!playerData) {
+            console.log("Datos del jugador no disponibles para normalizar.");
+            return null;
+        }
         // Normalizar los datos del jugador para que sean más fáciles de usar en la aplicación
         const player = playerData.player;
-        const stats = playerData.statistics[0]; // Assuming we want the first season's stats
+        const stats = playerData.statistics[0];
         return { 
             id: player.id,
             name: player.name,

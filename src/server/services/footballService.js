@@ -18,11 +18,19 @@ class FootballService {
     // Obtiene la lista de jugadores de un equipo específico
     async getTeamPlayers(teamId) {
         try {
-            const response = await apiFootball.get('/players/squad', {
-                params: {
-                    team: teamId,
-                }
-            });
+            const response = await apiFootball.get('/players/squads', {
+            params: {
+                team: teamId,
+            }
+        });
+
+        console.log(
+            JSON.stringify(
+                response.data,
+                null,
+                2
+            )
+        );
             return response.data;
         } catch (error) {
             console.error('Error al obtener jugadores del equipo:', error);

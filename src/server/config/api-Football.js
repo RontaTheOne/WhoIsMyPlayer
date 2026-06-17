@@ -8,6 +8,7 @@ const apiFootball = axios.create({
   headers: {
     'x-rapidapi-key': process.env.API_KEY,
   }
+
 });
 
 export default apiFootball;
