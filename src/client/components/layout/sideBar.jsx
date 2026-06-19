@@ -34,7 +34,7 @@ export default function Sidebar() {
         </NavLink>
 
         <NavLink
-          to="/player"
+          to="/players"
           className={({ isActive }) =>
             `nav-link ${isActive ? "active" : ""}`
           }
