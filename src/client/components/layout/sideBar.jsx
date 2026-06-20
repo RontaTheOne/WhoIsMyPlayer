@@ -39,7 +39,7 @@ export default function Sidebar() {
             `nav-link ${isActive ? "active" : ""}`
           }
         >
-          Jugadores
+          Convocados
         </NavLink>
       </nav>
     </aside>
