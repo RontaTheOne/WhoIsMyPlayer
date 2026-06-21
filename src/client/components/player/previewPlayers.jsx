@@ -3,7 +3,7 @@ import "../../assets/styles/previewPlayers.css";
 
 function PreviewPlayers({ player }) {
   if (!player) {
-    return <div>No player data available</div>;
+    return <div>Datos de los convocados no disponibles</div>;
   }
 
   const {id,name, age, position, photo} = player;
