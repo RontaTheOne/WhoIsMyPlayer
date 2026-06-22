@@ -1,0 +1,88 @@
+.player-card {
+  width: 300px;
+  height: 380px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  background: #d4af37;
+  border: 2px solid rgba(255, 215, 0, 0.4);
+}
+.player-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.player-image{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    padding: 1rem 1rem 0;
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(136, 96, 2, 0.95) 15%,
+    rgba(167, 129, 42, 0.3) 55%,
+    transparent 100%
+  );
+}
+
+.player-content {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.player-name{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: .5rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    text-shadow: 0 4px 12px rgba(0,0,0,.3);
+}
+.player-stats{
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+}
+
+.stat-item{
+    flex:1;
+}
+
+.player-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            45deg,
+            rgba(255,255,255,.08) 25%,
+            transparent 25%
+        ),
+        linear-gradient(
+            -45deg,
+            rgba(255,255,255,.05) 25%,
+            transparent 25%
+        );
+
+    background-size:120px 120px;
+
+    pointer-events:none;
+}
+
+.player-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+}

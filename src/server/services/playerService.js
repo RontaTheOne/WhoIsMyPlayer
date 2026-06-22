@@ -1,7 +1,22 @@
 class PlayerService{
-    normalizePlayer(playerData){
+    // Normaliza los datos del jugador convocado para la Copa del Mundo
+    normalizeSquadPlayer(playerData){
         if (!playerData) {
             console.log("Datos del jugador no disponibles para normalizar.");
+            return null;
+        }
+        return { 
+            id: playerData.id,
+            name: playerData.name,
+            age: playerData.age,
+            position: playerData.position ?? null,
+            photo: playerData.photo ?? null,
+        };
+    }
+    // Normaliza las estadísticas del jugador en la copa del mundo
+    normalizeStatsPlayer(playerData){
+        if (!playerData) {
+            console.log("Estadisticas del jugador no disponibles para normalizar.");
             return null;
         }
         // Normalizar los datos del jugador para que sean más fáciles de usar en la aplicación

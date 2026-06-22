@@ -1,0 +1,21 @@
+.players-swiper {
+  padding: 20px 50px 50px;
+}
+
+.players-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.players-swiper .swiper-pagination {
+  margin-top: 20px;
+}
+
+.players-swiper .swiper-button-prev,
+.players-swiper .swiper-button-next {
+  color: #d4af37;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
