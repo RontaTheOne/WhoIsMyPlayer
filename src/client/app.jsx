@@ -5,6 +5,7 @@ import Dashboard from "./components/dashboard/dashboard.jsx";
 import Ranking from "./components/ranking/ranking.jsx";
 import Compare from "./components/compare/compare.jsx";
 import Player from "./pages/players.jsx";
+import NationalTeams from "./pages/nationalTeams.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="ranking" element={<Ranking />} />
         <Route path="compare" element={<Compare />} />
         <Route path="players" element={<Player />} />
+        <Route path="national-teams" element={<NationalTeams />} />
         </Route>
       </Routes>
     </BrowserRouter>
