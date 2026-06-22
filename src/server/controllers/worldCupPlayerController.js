@@ -12,7 +12,7 @@ export const getWorldCupPlayers = async (req, res) => {
         res.status(500).json({ error: 'Error al obtener jugadores de la Copa del Mundo' });
     }
 };
-
+//Controlador para obtener las selecciones de la Copa del Mundo
 export const getWorldCupTeams = async (req, res) => {
     try{
         const teams = worldCupService.getWorldCupTeams();
