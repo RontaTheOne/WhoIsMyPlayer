@@ -1,7 +1,12 @@
 import footballService from "./footballService.js";
 import playerService from "./playerService.js";
+import {worldCupTeams} from "../data/worldCupTeams.js";
 
 class WorldCupService {
+  // Obtiene las selecciones de la Copa del Mundo
+  getWorldCupTeams(){
+    return worldCupTeams;
+  }
   // Obtiene los convocados para la Copa del Mundo
   WORLD_CUP_TEAMS = [1];
   async getWorldCupPlayers() {
