@@ -12,3 +12,4 @@ export const getWorldCupPlayers = async (req, res) => {
         res.status(500).json({ error: 'Error al obtener jugadores de la Copa del Mundo' });
     }
 };
+
