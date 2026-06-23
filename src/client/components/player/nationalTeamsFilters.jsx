@@ -1,6 +1,6 @@
 import React from "react";
 
-function nationalTeamsFilters() {
+function nationalTeamsFilters({ selectedFilter, onFilterChange }) {
   const filters = [
     "Todos",
     "CONMEBOL",
@@ -13,16 +13,20 @@ function nationalTeamsFilters() {
 
   return (
     <div className="national-teams-filters mb-4">
-        <div className="d-flex flex-wrap gap-2 mb-4">
-            {filters.map((filter, index) => (
+      <div className="row g-2 justify-content-center mb-4">
+        {filters.map((filter) => (
+          <div key={filter} className="col-6 col-sm-auto">
             <button
-                key={filter}
-                className={`btn ${
-                index === 0 ? "btn-success" : "btn-outline-secondary"
-                } rounded-pill`}
-                >
-            {filter}
+              className={`btn w-100 ${
+                selectedFilter === filter
+                  ? "filter-active"
+                  : "btn-outline-secondary"
+              } rounded-pill`}
+              onClick={() => onFilterChange(filter)}
+            >
+              {filter}
             </button>
+          </div>
         ))}
       </div>
     </div>

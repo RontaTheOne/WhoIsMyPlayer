@@ -6,6 +6,7 @@ import NationalTeamsCard from "../components/player/nationalTeamsCard.jsx";
 
 function NationalTeams() {
   const [teams, setTeams] = useState([]);
+  const [selectedFilter, setSelectedFilter] = useState("Todos");
 
   useEffect(() => {
     const fetchTeams = async () => {
@@ -23,17 +24,28 @@ function NationalTeams() {
     fetchTeams();
   }, []);
 
+ const filteredTeams =
+    selectedFilter === "Todos" ? teams: 
+    teams.filter(
+      (team) => team.confederation === selectedFilter
+    );
   return (
     <div className="national-teams-page">
       <h1 className="text-center">National Teams</h1>
       <p className="text-center">Welcome to the National Teams page!</p>
+      
       <NationalTeamsStats />
 
-      <NationalTeamsFilters />
+       <div className="row justify-content-center mt-2">
+          <NationalTeamsFilters
+            selectedFilter={selectedFilter}
+            onFilterChange={setSelectedFilter}
+          />
+      </div>
 
-      <div className="row g-4">
-        {teams.map((team) => (
-          <div key={team.id} className="col-12 col-md-6 col-lg-4">
+      <div className="row g-3">
+        {filteredTeams.map((team) => (
+          <div key={team.id} className="col-12 col-md-6 col-lg-3">
             <NationalTeamsCard team={team} />
           </div>
         ))}

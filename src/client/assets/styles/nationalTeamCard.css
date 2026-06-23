@@ -47,15 +47,14 @@
 /* Header */
 .selection-header {
   text-align: center;
-  margin-top: .5rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.4rem; /* antes 1rem */
 }
 
 .selection-logo {
   width: 100px;
   height: 100px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: 0.1rem; /* antes 1rem */
   filter: drop-shadow(0 4px 10px rgba(0,0,0,.15));
 }
 
@@ -69,24 +68,18 @@
   color: rgba(255,255,255,.8);
   font-size: .95rem;
   letter-spacing: 1px;
+  margin-bottom: 0;
 }
 
 /* Stats */
 .selection-stats {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   margin-top: auto;
-
   background: rgba(14,77,122,.45);
-
   backdrop-filter: blur(8px);
-
   border-radius: 12px;
-
   overflow: hidden;
-
   margin-bottom: 1rem;
 }
 

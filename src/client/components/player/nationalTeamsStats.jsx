@@ -3,8 +3,8 @@ import "../../assets/styles/nationalTeamsStats.css";
 
 function NationalTeamsStats() {
   return (
-    <div className="national-teams-stats mb-4">
-      <div className="stats-container">
+    <div className="stats-container row g-4 mb-4">
+      <div className="col-12 col-md-6 col-lg-4">
         <div className="stat-card">
           <div className="stat-icon">
             <i className="fas fa-shield-alt"></i>
@@ -14,7 +14,9 @@ function NationalTeamsStats() {
             <p>Equipos</p>
           </div>
         </div>
+      </div>
 
+      <div className="col-12 col-md-6 col-lg-4">
         <div className="stat-card">
           <div className="stat-icon">
             <i className="fas fa-users"></i>
@@ -24,9 +26,11 @@ function NationalTeamsStats() {
             <p>Jugadores convocados</p>
           </div>
         </div>
+      </div>
 
+      <div className="col-12 col-md-6 col-lg-4">
         <div className="stat-card">
-          <div className="stat-icon">
+           <div className="stat-icon">
             <i className="fas fa-trophy"></i>
           </div>
           <div className="stat-content">
