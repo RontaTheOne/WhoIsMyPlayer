@@ -1,7 +1,16 @@
 import React from "react";
 import "../../assets/styles/nationalTeamCard.css";
+import { useNavigate } from "react-router-dom";
 
 function NationalTeamsCard({team}) {
+
+  const navigate = useNavigate();
+
+  const ViewSquad = () => {
+    console.log("Botón presionado");
+    navigate(`/national-teams/${team.id}`);
+  };
+
   return (
     <div className="selection-card">
       {/* Ranking */}
@@ -42,7 +51,7 @@ function NationalTeamsCard({team}) {
         </div>
       </div>
 
-      <button className="selection-btn">Ver convocados →</button>
+      <button className="selection-btn" onClick={ViewSquad} >Ver convocados </button>
     </div>
   );
 }

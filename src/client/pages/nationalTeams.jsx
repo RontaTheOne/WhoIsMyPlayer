@@ -28,7 +28,8 @@ function NationalTeams() {
     selectedFilter === "Todos" ? teams: 
     teams.filter(
       (team) => team.confederation === selectedFilter
-    );
+  );
+
   return (
     <div className="national-teams-page">
       <h1 className="text-center">National Teams</h1>

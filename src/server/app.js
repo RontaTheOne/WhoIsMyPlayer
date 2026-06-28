@@ -9,7 +9,6 @@ app.use(cors())
 app.use(Express.json())
 
 // Rutas
-app.use('/world-cup-players', worldCupPlayerRoutes)
 app.use('/world-cup-teams', worldCupPlayerRoutes)
 //Rutas de validación
 app.use((req, res) => {

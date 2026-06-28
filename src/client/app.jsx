@@ -12,11 +12,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-        <Route index element={<Dashboard />} />
-        <Route path="ranking" element={<Ranking />} />
-        <Route path="compare" element={<Compare />} />
-        <Route path="players" element={<Player />} />
-        <Route path="national-teams" element={<NationalTeams />} />
+          <Route index element={<Dashboard />} />
+          <Route path="ranking" element={<Ranking />} />
+          <Route path="compare" element={<Compare />} />
+          <Route path="national-teams" element={<NationalTeams />} />
+          <Route path="national-teams/:teamId" element={<Player />}/>
         </Route>
       </Routes>
     </BrowserRouter>

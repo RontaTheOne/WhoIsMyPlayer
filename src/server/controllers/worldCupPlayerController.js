@@ -1,11 +1,13 @@
 import worldCupService from '../services/worldCupService.js';
 
 // Controlador para obtener jugadores de la Copa del Mundo
-export const getWorldCupPlayers = async (req, res) => {
+export const getWorldCupTeamPlayers = async (req, res) => {
+     console.log("Entró al controlador");
+    console.log(req.params);
     try {
-        const worldCupPlayers = await worldCupService.getWorldCupPlayers();
-        console.log("PLAYERS A ENVIAR:");
-        console.log(worldCupPlayers.length);
+        const {teamId} = req.params;
+        const worldCupPlayers = await worldCupService.getWorldCupPlayers(teamId);
+        
         res.json(worldCupPlayers);
     } catch (error) {
         console.error('Error al obtener jugadores de la Copa del Mundo:', error);
