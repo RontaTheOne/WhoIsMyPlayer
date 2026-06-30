@@ -1,4 +1,5 @@
 import React from "react";
+import "../../assets/styles/teamStats.css";
 
 function positionStats() {
   const stats = [
@@ -29,7 +30,7 @@ function positionStats() {
         <div className="row g-3 mb-4">
         {stats.map((item) => (
             <div className="col-md-3" key={item.title}>
-            <div className="card bg-dark border-0 h-100">
+            <div className="card position-card border-0 h-100">
                 <div className="card-body">
                 <small className="text-secondary">{item.title}</small>
 

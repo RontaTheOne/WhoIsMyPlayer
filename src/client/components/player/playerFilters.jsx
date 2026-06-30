@@ -1,13 +1,14 @@
 import React from "react";
+import "../../assets/styles/teamStats.css";
 
 function PlayerFilters() {
-    const filters = [
-        "Todos",
-        "Porteros",
-        "Defensas",
-        "Mediocampistas",
-        "Delanteros",
-    ];
+  const filters = [
+    "Todos",
+    "Porteros",
+    "Defensas",
+    "Mediocampistas",
+    "Delanteros",
+  ];
 
   return (
     <div className="player-filters mb-4">
@@ -23,9 +24,9 @@ function PlayerFilters() {
         {filters.map((filter, index) => (
           <button
             key={filter}
-            className={`btn ${
-              index === 0 ? "btn-success" : "btn-outline-secondary"
-            } rounded-pill`}
+            className={`btn rounded-pill ${
+              index === 0 ? "filter-active" : "filter-btn"
+            }`}
           >
             {filter}
           </button>

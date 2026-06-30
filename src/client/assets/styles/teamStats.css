@@ -1,0 +1,217 @@
+/* ================= HEADER ================= */
+
+.team-header {
+    position: relative;
+    overflow: hidden;
+
+    background: #1d5f92;
+    border-radius: 22px;
+
+    min-height: 120px;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Círculos */
+.header-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Círculo grande */
+.circle-1 {
+    width: 250px;
+    height: 250px;
+    right: 0px;
+    top: -35px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* Círculo pequeño */
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    right: 140px;
+    bottom: -100px;
+    background: rgba(255, 255, 255, 0.05);
+}
+/* ================= CONTENIDO ================= */
+
+.team-header-content{
+
+    position:relative;
+    z-index:2;
+
+    width:100%;
+
+    display:flex;
+    align-items:center;
+}
+
+/* ================= IZQUIERDA ================= */
+
+.team-info{
+
+    flex:2.4;
+
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+/* Escudo */
+
+.team-badge{
+
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #f7d84d,
+        #c79600
+    );
+
+    border:2px solid rgba(255,255,255,.35);
+
+    color:#fff;
+    font-size:1.8rem;
+    font-weight:700;
+
+    flex-shrink:0;
+}
+
+.team-name{
+
+    margin:0;
+
+    font-size:2.3rem;
+    font-weight:700;
+
+    color:#fff;
+}
+
+/* ================= DERECHA ================= */
+
+.team-stat{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.team-stat span{
+
+    color:#bfd0df;
+
+    font-size:.82rem;
+    font-weight:700;
+
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+.team-stat h3{
+    margin:0;
+    font-size:1.75rem;
+    font-weight:550;
+    color:#fff;
+    line-height:1;
+}
+
+.group-text{
+    color:#ffd400;
+}
+
+/* ================= CARDS STATS ================= */
+.card-team{
+    height: 100%;
+    background: linear-gradient(
+    270deg,
+    #69c4dc 0%,
+    #56b5cf 30%,
+    #1d5f92 70%
+  );
+}
+
+.position-card {
+  background: linear-gradient(
+    270deg,
+    #69c4dc 0%,
+    #56b5cf 30%,
+    #1d5f92 70%
+  );
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(29, 95, 146, 0.2);
+  transition: all 0.25s ease;
+}
+
+.position-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(29, 95, 146, 0.35);
+}
+
+.position-card .card-body {
+  padding: 1.3rem;
+}
+
+.position-title {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.position-total {
+  color: #fff;
+  margin: 0.4rem 0;
+  font-size: 2.2rem;
+}
+
+.position-best {
+  color: #ffd54f;
+  font-weight: 600;
+}
+
+.filter-active {
+  background-color: #1d5f92;
+  border: 1px solid #1d5f92;
+  color: #fff;
+}
+
+.filter-active:hover {
+  background-color: #174c75;
+  border-color: #174c75;
+  color: #fff;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid #6c757d;
+  color: #6c757d;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  background-color: #1d5f92;
+  border-color: #1d5f92;
+  color: #fff;
+}

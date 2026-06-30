@@ -32,15 +32,20 @@ function Players() {
     <div className="players-page">
       <div className="container">
         <TeamHeader />
+        <br/>
         <PositionStats />
         <PlayerFilters />
-       
-        <h2 className="text-center my-4">Jugadores convocados</h2>
 
-        <div className="row">
-          {players.map((player) => (
-            <PreviewPlayer className="col-sm-2 col-md-3 col-lg-4"  key={player.id} player={player} />
-          ))}
+        <h2 className="text-center my-4">Jugadores convocados</h2>
+           <div className="row justify-content-center g-4">
+    {players.map((player) => (
+        <div
+            key={player.id}
+            className="col-sm-12 col-md-6 col-lg-3 d-flex justify-content-center"
+          >
+            <PreviewPlayer player={player} />
+          </div>
+        ))}
         </div>
       </div>
     </div>

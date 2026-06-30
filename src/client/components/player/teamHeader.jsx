@@ -1,38 +1,45 @@
 import React from "react";
+import "../../assets/styles/teamStats.css";
 
 function TeamHeader() {
   return (
-    <div className="card bg-dark border-secondary text-white mb-4">
-      <div className="card-body">
-        <div className="row align-items-center">
-          <div className="col-auto">
-            <div className="team-badge">CO</div>
+     <div className="team-header">
+      {/* Círculos decorativos */}
+      <div className="header-circle circle-1"></div>
+      <div className="header-circle circle-2"></div>
+
+      <div className="team-header-content">
+
+        <div className="team-info">
+          <div className="team-badge">
+            CO
           </div>
 
-          <div className="col">
-            <h4 className="mb-0 fw-bold">Colombia</h4>
-          </div>
-
-          <div className="col-md-2">
-            <small className="text-secondary d-block">CONVOCADOS</small>
-            <h5>26</h5>
-          </div>
-
-          <div className="col-md-2">
-            <small className="text-secondary d-block">EDAD PROMEDIO</small>
-            <h5>27.4</h5>
-          </div>
-
-          <div className="col-md-2">
-            <small className="text-secondary d-block">GRUPO</small>
-            <h5>H</h5>
-          </div>
-
-          <div className="col-md-2">
-            <small className="text-secondary d-block">RANKING FIFA</small>
-            <h5>#11</h5>
-          </div>
+          <h2 className="team-name">
+            Colombia
+          </h2>
         </div>
+
+        <div className="team-stat">
+          <span>CONVOCADOS</span>
+          <h3>26</h3>
+        </div>
+
+        <div className="team-stat">
+          <span>EDAD PROM.</span>
+          <h3>27.4</h3>
+        </div>
+
+        <div className="team-stat">
+          <span>GRUPO</span>
+          <h3 className="group-text">H</h3>
+        </div>
+
+        <div className="team-stat">
+          <span>RANKING FIFA</span>
+          <h3>#11</h3>
+        </div>
+
       </div>
     </div>
   );

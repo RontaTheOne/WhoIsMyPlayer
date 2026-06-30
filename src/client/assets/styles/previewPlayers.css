@@ -1,88 +1,248 @@
-.player-card {
-  width: 300px;
-  height: 380px;
-  border-radius: 30px;
+.panini-card-wrap {
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
+/* =========================
+   CARD
+========================= */
+.panini-card {
+   width:100%;
+    max-width:280px;
+    min-width:220px;
+    height:430px;
+  border-radius: 20px;
   overflow: hidden;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  border: 3px solid #fff;
   position: relative;
-  background: #d4af37;
-  border: 2px solid rgba(255, 215, 0, 0.4);
+  display: flex;
+  flex-direction: column;
 }
-.player-image-container {
+
+/* =========================
+   HEADER
+========================= */
+
+.panini-header {
+  padding: 10px 14px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
-.player-image{
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    padding: 1rem 1rem 0;
+.panini-num {
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #fcd116;
+  letter-spacing: .05em;
+  line-height: 1;
 }
 
-.player-overlay {
+.panini-ghost {
   position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    to top,
-    rgba(136, 96, 2, 0.95) 15%,
-    rgba(167, 129, 42, 0.3) 55%,
-    transparent 100%
-  );
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Oswald", sans-serif;
+  font-size: 82px;
+  font-weight: 900;
+  color: rgba(255,255,255,.06);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
 }
 
-.player-content {
+.panini-wc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.panini-wc-year {
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #cce8f3;
+  line-height: 1;
+  letter-spacing: .08em;
+}
+
+.panini-wc-label {
+  font-family: "Oswald", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  letter-spacing: .12em;
+  margin-top: 2px;
+}
+
+/* =========================
+   FOTO
+========================= */
+
+.panini-photo {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.panini-photo-circle {
   position: absolute;
-  bottom: 35px;
-  left: 0;
-  right: 0;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  bottom: -55px;
+}
+
+.panini-photo img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 108%;
+  width: auto;
+  object-fit: contain;
+  object-position: center bottom;
+  z-index: 3;
+}
+
+.panini-initials {
+  position: absolute;
+  right: 15px;
+  bottom: 18px;
+  font-family: "Oswald", sans-serif;
+  font-size: 92px;
+  font-weight: 900;
+  color: rgba(255,255,255,.20);
+  line-height: .9;
   z-index: 2;
-  padding: 0 20px;
+}
+/* =========================
+   NOMBRE
+========================= */
+
+.panini-name-zone {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.player-name{
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-top: .5rem;
-    margin-bottom: 1.2rem;
-    text-align: center;
-    text-shadow: 0 4px 12px rgba(0,0,0,.3);
-}
-.player-stats{
-    display:flex;
-    justify-content:space-between;
-    text-align:center;
-}
-
-.stat-item{
-    flex:1;
+.panini-fullname {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: .02em;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
 }
 
-.player-card::before{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background:
-        linear-gradient(
-            45deg,
-            rgba(255,255,255,.08) 25%,
-            transparent 25%
-        ),
-        linear-gradient(
-            -45deg,
-            rgba(255,255,255,.05) 25%,
-            transparent 25%
-        );
-
-    background-size:120px 120px;
-
-    pointer-events:none;
+.panini-fullname span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #d8eef8;
+  margin: 0;
 }
 
-.player-card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+.panini-club {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #9cd1e8;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  text-align: center;
+}
+
+/* =========================
+   ESTADISTICAS
+========================= */
+
+.panini-data-strip {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.panini-data-item {
+  flex: 1;
+  text-align: center;
+}
+
+.panini-data-val {
+  font-family: "Oswald", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #fcd116;
+  line-height: 1;
+}
+
+.panini-data-key {
+  margin-top: 5px;
+  font-size: 9px;
+  color: #8bc3db;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.panini-data-divider {
+  width: 1px;
+  height: 34px;
+  background: rgba(255,255,255,.18);
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.panini-scout-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.panini-tag {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.panini-tag--green {
+  background: #064e3b;
+  color: #6EE7B7;
+}
+
+.panini-tag--yellow {
+  background: #422006;
+  color: #FCD34D;
+}
+
+.panini-tag--blue {
+  background: #1e3a5f;
+  color: #93C5FD;
+}
+
+.panini-tag--red {
+  background: #7f1d1d;
+  color: #FCA5A5;
 }
